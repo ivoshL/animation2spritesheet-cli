@@ -9,7 +9,7 @@ def print_usage():
     print ('    fileN - the path to the png file(s) or directory containing png file(s)')
     print ('    outfile - output file path')
 
-def check_valid_args():
+def main():
     if len(sys.argv) < 4:
         print_usage()
         sys.exit(1)
@@ -63,9 +63,6 @@ def check_valid_args():
             sys.exit(1)
     print(f'saving {sys.argv[-1]}...')
     spritesheet.save(sys.argv[-1])
-
-def main():
-    check_valid_args()
     
     
 
